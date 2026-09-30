@@ -1,0 +1,26 @@
+# Description: This program converts a cat's age into human years.
+
+# Set constants and initialize human age
+YEAR1 = 15
+YEAR2 = 9
+YEAR3 = 4
+humanYears = 0
+
+# Get user inputs
+catName = input('What is your cat\'s name: ')
+catAge = int(input('What is your cat\'s age: '))
+
+# Checks if age is valid
+if catAge < 0:
+    print(f'{catAge} years is an invalid age for {catName}. \nPlease run the program again!')
+    quit()
+
+# Converts the cat age to human years
+if catAge >= 1:
+    humanYears += YEAR1
+if catAge >= 2:
+    humanYears += YEAR2
+if catAge >= 3:
+    humanYears += (catAge - 2) * YEAR3
+
+print(f'Your cat {catName} is {humanYears} in human years')
