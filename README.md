@@ -1,2 +1,1 @@
-# Python-Projects
-Miscellaneous Python programs
+A compilation of Bash projects I've written. Unauthorized use is prohibited.
