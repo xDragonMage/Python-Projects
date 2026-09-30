@@ -1,0 +1,16 @@
+# Description: This program checks a users inputted credentials and outputs
+#              if they were accepted or not.
+
+# Hardcoding the username and password
+username = 'admin'
+password = 'password123'
+
+# Getting user input for username and password
+user = input('Enter username: ')
+passw = input('Enter password: ')
+
+# Checking if input is correct and displaying appropriate message
+if username == user and password == passw:
+    print(f'Welcome, {username}!')
+else:
+    print(f'Access denied.')
