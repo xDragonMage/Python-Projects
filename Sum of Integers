@@ -1,0 +1,16 @@
+# Description: This program calculates the sum of 'n' integers.
+
+number = int(input('Enter a number: '))
+
+# Checks if number is positive and not zero
+if number < 1:
+    print(f'{number} is an invalid entry. You must enter a positive whole number!')
+    print(f'Please run the program again!')
+# Checks if number is within range
+elif number > 1531:
+    print(f'While {number} is a positive number it is an invalid entry.')
+    print(f'Please run the program again and enter numbers in 1..1531 range!')
+# Calculates and prints sum if number is valid
+else:
+    sumNumber = (number * (number + 1)) // 2
+    print(f'The sum of the first {number} positive integers is {sumNumber}')
