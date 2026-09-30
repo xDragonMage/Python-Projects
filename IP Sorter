@@ -1,0 +1,33 @@
+# Description: This program identifies private IPS, counts public IPs,
+#              sorts/reverses private IPs, checks IP length, and removes 255.255.255.255
+
+public_count = 0
+private_ips = []
+ip_addresses = [
+    "192.168.1.1",
+    "10.0.0.5",
+    "172.16.0.1",
+    "8.8.8.8",
+    "172.32.0.1",
+    "255.255.255.255"
+]
+# Checks if each IP is long, private or public, and removes '255.255.255.255' if it exists
+for ipAddress in ip_addresses:
+    if len(ipAddress) > 15:
+        print(f'{ipAddress} is a long IP address.')
+
+    if ipAddress[0:3] == '10.' or ipAddress[0:7] == '192.168':
+        private_ips.append(ipAddress)
+    elif ipAddress[0:3] == '172' and 15 < int(ipAddress[4:6]) < 32:
+        private_ips.append(ipAddress)
+    elif ipAddress == '255.255.255.255':
+        ip_addresses.remove(ipAddress)
+    else:
+        public_count += 1
+
+print(f'Private IPs: {private_ips}')
+print(f'Number of Public IPs: {public_count}')
+
+private_ips.sort()
+private_ips.reverse()
+print(f'Sorted and Reversed Private IPs: {private_ips}')
