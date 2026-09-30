@@ -1,1 +1,1 @@
-A compilation of Bash projects I've written. Unauthorized use is prohibited.
+A compilation of Python projects I've written. Unauthorized use is prohibited.
