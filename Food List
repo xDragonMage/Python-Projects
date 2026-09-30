@@ -1,0 +1,28 @@
+# Description: Creates a favorite foods list and breakfast list
+#              that the user can input values into.
+
+favorite_food = ['ice cream', 'pizza']
+extraFavoriteFood = ['pretzels', 'sushi']
+breakfast = []
+breakfastInput = ''
+
+# Asks the user for 3 more favorite foods
+for i in range (0,3):
+    favorite_food.append(input('Enter a favorite food: '))
+
+# Appends the extra favorite foods, prints the first two and last item of favorite foods
+favorite_food.extend(extraFavoriteFood)
+print(f'{favorite_food[0]}, {favorite_food[1]}')
+print(f'{favorite_food[len(favorite_food)-1]}')
+
+# Asks the user to enter breakfast foods until 'Done' is entered
+while True:
+    breakfastInput = input('Enter a breakfast food (type \'Done\' to finish): ')
+    if breakfastInput == 'Done':
+        break
+    else:
+        breakfast.append(breakfastInput)
+
+# Creates a list that contains the lengths of each string in the breakfast list, prints it
+lengths = [len(x) for x in breakfast]
+print(lengths)
