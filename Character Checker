@@ -1,0 +1,16 @@
+# Description: This checks if the inputted value is uppercase,
+#              lowercase, a digit, or special character.
+
+character = input("Enter a character: ")
+
+# Uses ascii values of characters to sort them
+if '0' <= character <= '9':
+    print(f'{character} is a digit')
+elif 'A' <= character <= 'Z':
+    print(f'{character} is an uppercase letter')
+elif 'a' <= character <= 'z':
+    print(f'{character} is a lowercase letter')
+else:
+    print(f'{character} is a special symbol')
+
+print(f'Thank you. Have a nice day!')
